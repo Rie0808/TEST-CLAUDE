@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carebear — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Carebear</a>
+      <ul class="nav-links">
+        <li><a href="index.html#caregivers">Caregivers</a></li>
+        <li><a href="interviews.html">Interviews</a></li>
+        <li><a href="considerations.html">Considerations</a></li>
+        <li><a href="prototype.html" class="active">Prototype</a></li>
+        <li><a href="index.html#grab">For Grab</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container narrow">
+      <p class="eyebrow">Clickable prototype</p>
+      <h1 class="page-title">HuiN's Thursday appointment.</h1>
+      <p class="page-sub">Tap through the screens to see how Carebear coordinates Dad's cardiologist visit — from the morning's calendar to the synced arrival at the clinic door.</p>
+    </div>
+  </header>
+
+  <section class="prototype-stage">
+    <div class="container">
+      <div class="stage-grid">
+
+        <!-- Left: context & step list -->
+        <aside class="prototype-context">
+          <p class="eyebrow">The flow</p>
+          <ol class="screen-list">
+            <li data-step="home"><span class="step-dot"></span>Today's events</li>
+            <li data-step="appointment"><span class="step-dot"></span>Appointment details</li>
+            <li data-step="booking"><span class="step-dot"></span>Book Dad's Grab</li>
+            <li data-step="dual"><span class="step-dot"></span>Sync your own trip</li>
+            <li data-step="live"><span class="step-dot"></span>Both trips live</li>
+            <li data-step="arrived"><span class="step-dot"></span>Arrived</li>
+          </ol>
+          <button class="btn btn-ghost restart-btn" data-goto="home">↺ Restart demo</button>
+          <p class="prototype-note">Buttons inside the phone are tappable. "Send to Grab" is mocked — in the real app, this would open the Grab app with everything pre-filled.</p>
+        </aside>
+
+        <!-- Right: phone frame containing all screens -->
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-inner">
+
+            <!-- =========================================================
+                 SCREEN 1: HOME — today's events
+                 ========================================================= -->
+            <div class="app-screen active" data-screen="home">
+              <div class="app-statusbar">
+                <span>2:18</span>
+                <span>● ● ●</span>
+              </div>
+              <div class="app-header">
+                <div>
+                  <p class="app-greeting">Good afternoon,</p>
+                  <h2 class="app-name">HuiN</h2>
+                </div>
+                <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=HuiN&backgroundColor=f7e4dc" alt="HuiN" class="app-avatar" />
+              </div>
+              <div class="app-content">
+                <p class="app-section-label">Today · Thursday</p>
+
+                <div class="event-card upcoming" data-goto="appointment">
+                  <div class="event-time">3:00 PM</div>
+                  <div class="event-body">
+                    <p class="event-title">Dad — Cardiologist</p>
+                    <p class="event-meta">Mt Elizabeth · Dr. Tan Wei Ming</p>
+                    <div class="event-people">
+                      <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=Dad&backgroundColor=e6ebe0" alt="Dad" />
+                      <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=Mum&backgroundColor=f3ece0" alt="Mum" />
+                      <span class="event-tag">+ you (meeting at Entrance B)</span>
+                    </div>
+                  </div>
+                  <div class="event-status">
+                    <span class="pill pill-warning">Book Grab in 12 min</span>
+                  </div>
+                </div>
+
+                <div class="event-card quiet">
+                  <div class="event-time">7:30 PM</div>
+                  <div class="event-body">
+                    <p class="event-title">Mum — Medication</p>
+                    <p class="event-meta">Helper notified · auto-reminder set</p>
+                  </div>
+                  <div class="event-status">
+                    <span class="pill pill-soft">Routine</span>
+                  </div>
+                </div>
+
+                <p class="app-section-label spaced">Tomorrow</p>
+                <div class="event-card quiet">
+                  <div class="event-time">10:00 AM</div>
+                  <div class="event-body">
+                    <p class="event-title">Mum — Physiotherapy</p>
+                    <p class="event-meta">Toa Payoh Polyclinic</p>
+                  </div>
+                </div>
+              </div>
+              <div class="app-tabbar">
+                <div class="tab active">🏠<span>Home</span></div>
+                <div class="tab">📅<span>Calendar</span></div>
+                <div class="tab">👤<span>Profiles</span></div>
+              </div>
+            </div>
+
+            <!-- =========================================================
+                 SCREEN 2: APPOINTMENT DETAIL
+                 ========================================================= -->
+            <div class="app-screen" data-screen="appointment">
+              <div class="app-statusbar">
+                <span>2:18</span>
+                <span>● ● ●</span>
+              </div>
+              <div class="app-header with-back">
+                <button class="app-back" data-goto="home">←</button>
+                <h2 class="app-screen-title">Dad's appointment</h2>
+              </div>
+              <div class="app-content">
+
+                <div class="info-card">
+                  <p class="info-time">Thursday · 3:00 PM</p>
+                  <h3 class="info-title">Cardiologist follow-up</h3>
+                  <p class="info-place">Mt Elizabeth Hospital · Cardiology Wing</p>
+                  <p class="info-doctor">Dr. Tan Wei Ming</p>
+                </div>
+
+                <p class="app-section-label">Who's going</p>
+                <div class="people-row">
+                  <div class="person-chip">
+                    <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=Dad&backgroundColor=e6ebe0" alt="Dad" />
+                    <div>
+                      <p class="person-name">Dad</p>
+                      <p class="person-role">Patient</p>
+                    </div>
+                  </div>
+                  <div class="person-chip">
+                    <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=Mum&backgroundColor=f3ece0" alt="Mum" />
+                    <div>
+                      <p class="person-name">Mum</p>
+                      <p class="person-role">Companion</p>
+                    </div>
+                  </div>
+                  <div class="person-chip">
+                    <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=HuiN&backgroundColor=f7e4dc" alt="HuiN" />
+                    <div>
+                      <p class="person-name">You</p>
+                      <p class="person-role">Meeting at Entrance B</p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="app-section-label">Prep</p>
+                <ul class="prep-list">
+                  <li>✓ Confirmed with Dad yesterday</li>
+                  <li>📋 Bring BP record book</li>
+                  <li>🍵 Fasting not required</li>
+                </ul>
+
+                <p class="app-section-label">Smart timeline</p>
+                <ul class="timeline">
+                  <li class="done"><span class="dot"></span>Confirmed with Dad <em>yesterday</em></li>
+                  <li class="done"><span class="dot"></span>Helpers notified <em>this morning</em></li>
+                  <li class="active"><span class="dot"></span>Time to book Grab <em>now</em></li>
+                  <li><span class="dot"></span>Driver arrives <em>2:45 PM</em></li>
+                  <li><span class="dot"></span>Live tracking <em>during ride</em></li>
+                  <li><span class="dot"></span>Arrival sync <em>3:00 PM</em></li>
+                </ul>
+              </div>
+              <div class="app-cta-bar">
+                <button class="app-btn app-btn-primary" data-goto="booking">Book Dad's Grab →</button>
+              </div>
+            </div>
+
+            <!-- =========================================================
+                 SCREEN 3: BOOKING — pre-filled
+                 ========================================================= -->
+            <div class="app-screen" data-screen="booking">
+              <div class="app-statusbar">
+                <span>2:30</span>
+                <span>● ● ●</span>
+              </div>
+              <div class="app-header with-back">
+                <button class="app-back" data-goto="appointment">←</button>
+                <h2 class="app-screen-title">Confirm Dad's Grab</h2>
+              </div>
+              <div class="app-content">
+
+                <div class="trip-card">
+                  <div class="trip-row">
+                    <span class="trip-dot pickup"></span>
+                    <div>
+                      <p class="trip-label">Pickup</p>
+                      <p class="trip-value">Dad's home · Hougang</p>
+                    </div>
+                  </div>
+                  <div class="trip-line"></div>
+                  <div class="trip-row">
+                    <span class="trip-dot dropoff"></span>
+                    <div>
+                      <p class="trip-label">Drop-off</p>
+                      <p class="trip-value">Mt Elizabeth Hospital · Cardiology Wing</p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="app-section-label">Passengers</p>
+                <div class="passenger-row">
+                  <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=Dad&backgroundColor=e6ebe0" alt="Dad" />
+                  <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=Mum&backgroundColor=f3ece0" alt="Mum" />
+                  <span>Dad (76) + Mum (74)</span>
+                </div>
+
+                <p class="app-section-label">Driver briefing <span class="badge">auto-filled</span></p>
+                <div class="briefing-box">
+                  <p>"Passenger is elderly, walking with cane. Will be accompanied by spouse. Please confirm pickup with me at <strong>+65 9123 4567</strong> before they enter the vehicle."</p>
+                </div>
+
+                <p class="app-section-label">Estimated</p>
+                <div class="estimate-row">
+                  <div>
+                    <p class="estimate-label">Driver arrives</p>
+                    <p class="estimate-value">2:42 PM</p>
+                  </div>
+                  <div>
+                    <p class="estimate-label">Reaches clinic</p>
+                    <p class="estimate-value">2:55 PM</p>
+                  </div>
+                  <div>
+                    <p class="estimate-label">Fare est.</p>
+                    <p class="estimate-value">~$18</p>
+                  </div>
+                </div>
+              </div>
+              <div class="app-cta-bar">
+                <button class="app-btn app-btn-primary" data-goto="dual">Send to Grab →</button>
+              </div>
+            </div>
+
+            <!-- =========================================================
+                 SCREEN 4: DUAL BOOKING — rendezvous sync
+                 ========================================================= -->
+            <div class="app-screen" data-screen="dual">
+              <div class="app-statusbar">
+                <span>2:31</span>
+                <span>● ● ●</span>
+              </div>
+              <div class="app-header with-back">
+                <button class="app-back" data-goto="booking">←</button>
+                <h2 class="app-screen-title">One more thing</h2>
+              </div>
+              <div class="app-content">
+
+                <div class="prompt-card">
+                  <div class="prompt-icon">📍</div>
+                  <h3 class="prompt-title">You're meeting Dad at the clinic.</h3>
+                  <p class="prompt-sub">Book your Grab too — we'll time it so you arrive a few minutes before him.</p>
+                </div>
+
+                <div class="trip-card subtle">
+                  <p class="trip-section-label">Your trip</p>
+                  <div class="trip-row">
+                    <span class="trip-dot pickup"></span>
+                    <div>
+                      <p class="trip-label">Pickup</p>
+                      <p class="trip-value">Your office · Raffles Place</p>
+                    </div>
+                  </div>
+                  <div class="trip-line"></div>
+                  <div class="trip-row">
+                    <span class="trip-dot dropoff"></span>
+                    <div>
+                      <p class="trip-label">Drop-off</p>
+                      <p class="trip-value">Mt Elizabeth · Entrance B</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sync-banner">
+                  <p>⏱ Suggested pickup: <strong>2:38 PM</strong></p>
+                  <p class="sync-sub">You'll arrive at <strong>2:55 PM</strong> — 5 min before Dad.</p>
+                </div>
+              </div>
+              <div class="app-cta-bar stacked">
+                <button class="app-btn app-btn-primary" data-goto="live">Book both →</button>
+                <button class="app-btn app-btn-ghost" data-goto="live">I'll arrange my own</button>
+              </div>
+            </div>
+
+            <!-- =========================================================
+                 SCREEN 5: LIVE MONITORING — both trips active
+                 ========================================================= -->
+            <div class="app-screen" data-screen="live">
+              <div class="app-statusbar">
+                <span>2:46</span>
+                <span>● ● ●</span>
+              </div>
+              <div class="app-header with-back">
+                <button class="app-back" data-goto="dual">←</button>
+                <h2 class="app-screen-title">Both trips live</h2>
+              </div>
+              <div class="app-content no-pad">
+
+                <div class="map-mock">
+                  <div class="map-pin pin-dad" title="Dad's car">🚗</div>
+                  <div class="map-pin pin-you" title="Your car">🚙</div>
+                  <div class="map-pin pin-dest" title="Mt Elizabeth">📍</div>
+                  <div class="map-label">Mt Elizabeth Hospital</div>
+                </div>
+
+                <div class="padded">
+                  <div class="sync-banner success">
+                    <p>✓ On track</p>
+                    <p class="sync-sub">You'll arrive <strong>4 minutes before</strong> Dad.</p>
+                  </div>
+
+                  <div class="trip-status">
+                    <div class="trip-status-row">
+                      <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=Dad&backgroundColor=e6ebe0" alt="Dad" />
+                      <div class="trip-status-body">
+                        <p class="trip-status-title">Dad &amp; Mum</p>
+                        <p class="trip-status-meta">Driver: Ahmad · SHF1234X</p>
+                      </div>
+                      <div class="trip-status-eta">
+                        <p class="eta-num">12 min</p>
+                        <p class="eta-label">to clinic</p>
+                      </div>
+                    </div>
+                    <div class="trip-status-row">
+                      <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=HuiN&backgroundColor=f7e4dc" alt="HuiN" />
+                      <div class="trip-status-body">
+                        <p class="trip-status-title">You</p>
+                        <p class="trip-status-meta">Driver: Kumar · SGY5678Z</p>
+                      </div>
+                      <div class="trip-status-eta">
+                        <p class="eta-num">8 min</p>
+                        <p class="eta-label">to clinic</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p class="app-section-label">Activity</p>
+                  <ul class="activity-list">
+                    <li>✓ Driver briefed about Dad</li>
+                    <li>✓ Mum confirmed in car with Dad</li>
+                    <li>✓ Live tracking active for both trips</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="app-cta-bar">
+                <button class="app-btn app-btn-primary" data-goto="arrived">Fast-forward to arrival →</button>
+              </div>
+            </div>
+
+            <!-- =========================================================
+                 SCREEN 6: ARRIVED
+                 ========================================================= -->
+            <div class="app-screen" data-screen="arrived">
+              <div class="app-statusbar">
+                <span>2:55</span>
+                <span>● ● ●</span>
+              </div>
+              <div class="app-header">
+                <h2 class="app-screen-title centered">All synced</h2>
+              </div>
+              <div class="app-content">
+
+                <div class="arrival-hero">
+                  <div class="arrival-check">✓</div>
+                  <h3>Dad has arrived</h3>
+                  <p>He's at <strong>Entrance B</strong>, with Mum.</p>
+                </div>
+
+                <div class="arrival-status">
+                  <p class="status-line"><strong>You arrive in 2 min</strong></p>
+                  <p class="status-sub">You're 4 minutes ahead of Dad — perfect.</p>
+                </div>
+
+                <p class="app-section-label">What's next</p>
+                <div class="next-card">
+                  <p class="next-title">📝 Log this visit</p>
+                  <p class="next-sub">Add notes after the appointment so Carebear has context for next time.</p>
+                </div>
+                <div class="next-card">
+                  <p class="next-title">🔄 Schedule return trip</p>
+                  <p class="next-sub">Book a Grab home for Dad & Mum after the consultation.</p>
+                </div>
+
+                <div class="closing-msg">
+                  <p>Your 30 minutes — back.</p>
+                </div>
+              </div>
+              <div class="app-cta-bar">
+                <button class="app-btn app-btn-primary" data-goto="home">Start over ↺</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="brand-foot">Carebear</p>
+      <p class="footer-meta">A student project in partnership with Grab. Built with care, for caregivers.</p>
+    </div>
+  </footer>
+
+  <script>
+    // ===========================================================
+    // Prototype screen switching — the entire interactivity layer.
+    //
+    // How it works:
+    //   - Every "screen" is a <div> with data-screen="X"
+    //   - Every clickable button has data-goto="X"
+    //   - When clicked, we hide all screens and show the target
+    //   - We also update the step indicator on the left
+    //
+    // That's it. Pure HTML/CSS/JS, no libraries.
+    // ===========================================================
+
+    const SCREENS = ['home', 'appointment', 'booking', 'dual', 'live', 'arrived'];
+
+    function goTo(screenName) {
+      // hide all screens, show the target
+      document.querySelectorAll('.app-screen').forEach(s => s.classList.remove('active'));
+      const target = document.querySelector(`[data-screen="${screenName}"]`);
+      if (target) target.classList.add('active');
+
+      // update the step indicator on the left
+      const stepIndex = SCREENS.indexOf(screenName);
+      document.querySelectorAll('.screen-list li').forEach((li, idx) => {
+        li.classList.toggle('current', idx === stepIndex);
+        li.classList.toggle('done', idx < stepIndex);
+      });
+
+      // scroll the phone back to top when switching screens
+      if (target) target.querySelector('.app-content')?.scrollTo({ top: 0 });
+    }
+
+    // Wire up any element with a data-goto attribute
+    document.querySelectorAll('[data-goto]').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        goTo(el.dataset.goto);
+      });
+    });
+
+    // Initialize step indicator on first load
+    goTo('home');
+  </script>
+</body>
+</html>
