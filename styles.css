@@ -553,8 +553,92 @@ a { color: inherit; text-decoration: none; }
    makes one visible; everything else is hidden.
    =========================================================== */
 
-.prototype-stage { padding: 60px 0 100px; }
+.prototype-stage { padding: 40px 0 80px; }
 
+/* Compact variant for the page hero on prototype page */
+.page-hero.compact { padding: 70px 0 30px; }
+
+/* ---------- Narrative caption above the phone ---------- */
+.stage-caption {
+  text-align: center;
+  max-width: 540px;
+  margin: 0 auto 36px;
+  min-height: 110px;
+}
+.stage-meter {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-coral-deep);
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.stage-meter-sep { color: var(--ink-soft); font-weight: 400; }
+.stage-meter-dot { color: var(--line); margin: 0 4px; }
+.stage-narrative {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: var(--ink);
+  font-weight: 400;
+}
+
+/* ---------- Stage controls below the phone ---------- */
+.stage-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+.stage-controls .btn { min-width: 140px; }
+.stage-controls .btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.stage-dots {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.dot-mark {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--line);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.dot-mark.done { background: var(--accent-sage); }
+.dot-mark.current {
+  background: var(--accent-coral);
+  transform: scale(1.4);
+}
+.dot-mark:hover { background: var(--ink-soft); }
+.dot-mark.current:hover { background: var(--accent-coral); }
+
+.restart-row { text-align: center; margin-top: 18px; }
+.restart-link {
+  background: none;
+  border: none;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+}
+.restart-link:hover { color: var(--ink); background: var(--bg-cream); }
+
+/* legacy two-column layout — kept in case we want it later */
 .stage-grid {
   display: grid;
   grid-template-columns: 280px 1fr;

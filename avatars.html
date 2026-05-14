@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avatar options — HuiN (Lorelei)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .avatar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+      margin: 40px 0;
+    }
+    .avatar-option {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+      border: 2px solid transparent;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .avatar-option:hover {
+      border-color: var(--accent-coral);
+      transform: translateY(-2px);
+    }
+    .avatar-option img {
+      width: 120px;
+      height: 120px;
+      border-radius: 999px;
+      background: var(--bg-cream);
+      margin-bottom: 14px;
+    }
+    .avatar-style {
+      font-family: 'Fraunces', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .avatar-recipe {
+      font-size: 0.75rem;
+      color: var(--ink-soft);
+      font-family: monospace;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .avatar-note {
+      font-size: 0.8rem;
+      color: var(--ink-soft);
+      line-height: 1.4;
+    }
+    .avatar-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-coral-deep);
+      font-weight: 600;
+      background: var(--bg-coral);
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header class="page-hero compact">
+    <div class="container narrow">
+      <p class="eyebrow">Avatar options · Lorelei</p>
+      <h1 class="page-title">Pick HuiN's look.</h1>
+      <p class="page-sub">Staying with Lorelei (since it matches the warm vibe of the rest of the site), but adding glasses, earrings, and trying different seeds to push toward a more polished, working-woman feel. Tell me which option number works (or "none — try something else").</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="avatar-grid">
+
+        <div class="avatar-option">
+          <span class="avatar-label">Current</span>
+          <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=HuiN&backgroundColor=f7e4dc" alt="Option 1" />
+          <p class="avatar-style">Option 1</p>
+          <p class="avatar-recipe">seed: HuiN<br/>no accessories</p>
+          <p class="avatar-note">The current avatar — reference point.</p>
+        </div>
+
+        <div class="avatar-option">
+          <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=HuiN&backgroundColor=f7e4dc&glassesProbability=100" alt="Option 2" />
+          <p class="avatar-style">Option 2</p>
+          <p class="avatar-recipe">seed: HuiN<br/>+ glasses</p>
+          <p class="avatar-note">Same person + reading glasses. Most subtle polish.</p>
+        </div>
+
+        <div class="avatar-option">
+          <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=HuiN&backgroundColor=f7e4dc&glassesProbability=100&earringsProbability=100" alt="Option 3" />
+          <p class="avatar-style">Option 3</p>
+          <p class="avatar-recipe">seed: HuiN<br/>+ glasses + earrings</p>
+          <p class="avatar-note">Glasses + simple earrings. Layers more polish.</p>
+        </div>
+
+        <div class="avatar-option">
+          <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=CherieLin&backgroundColor=f7e4dc&glassesProbability=100" alt="Option 4" />
+          <p class="avatar-style">Option 4</p>
+          <p class="avatar-recipe">seed: CherieLin<br/>+ glasses</p>
+          <p class="avatar-note">Different seed = different face/hair. + glasses.</p>
+        </div>
+
+        <div class="avatar-option">
+          <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=CherieLin&backgroundColor=f7e4dc&glassesProbability=100&earringsProbability=100" alt="Option 5" />
+          <p class="avatar-style">Option 5</p>
+          <p class="avatar-recipe">seed: CherieLin<br/>+ glasses + earrings</p>
+          <p class="avatar-note">Same seed as 4 with earrings too.</p>
+        </div>
+
+        <div class="avatar-option">
+          <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=LinHuiN42&backgroundColor=f7e4dc&glassesProbability=100&earringsProbability=100" alt="Option 6" />
+          <p class="avatar-style">Option 6</p>
+          <p class="avatar-recipe">seed: LinHuiN42<br/>+ glasses + earrings</p>
+          <p class="avatar-note">Different seed again. Lottery — see what comes.</p>
+        </div>
+
+        <div class="avatar-option">
+          <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=ProMum&backgroundColor=f7e4dc&glassesProbability=100" alt="Option 7" />
+          <p class="avatar-style">Option 7</p>
+          <p class="avatar-recipe">seed: ProMum<br/>+ glasses</p>
+          <p class="avatar-note">Another seed roll. Glasses only.</p>
+        </div>
+
+        <div class="avatar-option">
+          <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=SGCaregiver&backgroundColor=f7e4dc&glassesProbability=100&earringsProbability=100" alt="Option 8" />
+          <p class="avatar-style">Option 8</p>
+          <p class="avatar-recipe">seed: SGCaregiver<br/>+ glasses + earrings</p>
+          <p class="avatar-note">Another roll. Loaded with accessories.</p>
+        </div>
+
+      </div>
+
+      <div class="back-link-wrap">
+        <a href="index.html" class="btn btn-ghost">← Back to home</a>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>
