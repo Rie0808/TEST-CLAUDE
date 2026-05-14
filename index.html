@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carebear — A digital PA for caregivers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand">Carebear</a>
+      <ul class="nav-links">
+        <li><a href="#caregivers">Caregivers</a></li>
+        <li><a href="interviews.html">Interviews</a></li>
+        <li><a href="#problem">The problem</a></li>
+        <li><a href="considerations.html">Considerations</a></li>
+        <li><a href="#carebear">Carebear</a></li>
+        <li><a href="#grab">For Grab</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="top" class="hero">
+    <div class="container">
+      <p class="eyebrow">A digital PA for caregivers</p>
+      <h1 class="hero-title">Three caregivers. One invisible job.</h1>
+      <p class="hero-sub">Jocelyn, Julie, and HuiN don't know each other. But they spend their days doing the same hidden work — running logistics for the people they love. This is what we heard from them, and what we're building.</p>
+      <div class="hero-cta">
+        <a href="#caregivers" class="btn btn-primary">Meet them</a>
+        <a href="#carebear" class="btn btn-ghost">Skip to the solution</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="caregivers" class="section">
+    <div class="container">
+      <p class="eyebrow centered">Three caregivers</p>
+      <h2 class="centered">Meet them first</h2>
+      <p class="lede centered">Before we designed anything, we listened. Three families, three different setups, three versions of the same story.</p>
+
+      <div class="persona-grid">
+        <article class="persona">
+          <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jocelyn&backgroundColor=f3ece0" alt="Jocelyn avatar" class="persona-avatar" />
+          <div class="persona-tag">Jocelyn</div>
+          <h3>"Where exactly is the TCM?"</h3>
+          <p>Jocelyn books Grabs for her parents-in-law. One day her FIL wanted to visit his TCM but could only describe the general area in Hougang. She spent twenty minutes asking questions and reverse image-searching on Google before she could even open Grab — then she had to run interference between the driver and FIL the whole way there.</p>
+          <p class="persona-pain"><strong>Pain:</strong> Destinations live in someone else's head. Caregivers do the detective work.</p>
+          <a href="interviews.html#jocelyn" class="persona-link">Read her interview →</a>
+        </article>
+
+        <article class="persona">
+          <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=Julie&backgroundColor=e6ebe0" alt="Julie avatar" class="persona-avatar" />
+          <div class="persona-tag">Julie</div>
+          <h3>Thirty minutes, twice a day</h3>
+          <p>Julie's mum has early-stage dementia. Each day, Aunty G's part-time helper walks her down and pings Julie to call a Grab. Julie books it, briefs the driver about the dementia, monitors the route, and pings her own helper to be downstairs in time to receive her mum. Then again in reverse, every evening.</p>
+          <p class="persona-pain"><strong>Pain:</strong> For thirty minutes, twice a day, Julie's life stops. She's the human relay between four people who can't message each other directly.</p>
+          <a href="interviews.html#julie" class="persona-link">Read her interview →</a>
+        </article>
+
+        <article class="persona">
+          <img src="https://api.dicebear.com/9.x/lorelei/svg?seed=HuiN&backgroundColor=f7e4dc" alt="HuiN avatar" class="persona-avatar" />
+          <div class="persona-tag">HuiN</div>
+          <h3>Meeting them at the door</h3>
+          <p>HuiN's dad has many medical appointments. Her mum can't coordinate them, so HuiN holds the calendar. For each visit she books a Grab to send her parents from home to the clinic, then makes her own way there to meet them at the entrance. Two arrivals to sync. Two trips to track. One appointment after another.</p>
+          <p class="persona-pain"><strong>Pain:</strong> Caregivers aren't just dispatchers — they're rendezvous coordinators. The hardest part isn't the ride; it's the sync.</p>
+          <a href="interviews.html#huin" class="persona-link">Read her interview →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="problem" class="section section-cream">
+    <div class="container narrow">
+      <p class="eyebrow">What we heard</p>
+      <h2>The caregiver has become the dispatcher.</h2>
+      <p class="lede">
+        Three different families. One shared truth: the people doing the caregiving are also doing the <strong>logistics layer</strong> around it — and that layer is invisible work.
+      </p>
+      <p>
+        Destination research. Driver briefing. Live route monitoring. Pickup-side handoffs. Drop-off-side receivers. Rendezvous timing. Re-booking when things slip. None of this is the caregiving — but all of it falls on the caregiver, because no one else has the context to do it.
+      </p>
+      <p>
+        It happens during their work hours. It fragments their attention. It can't be delegated, because the coordination *is* the work.
+      </p>
+
+      <div class="insight-card">
+        <p class="insight-text">"For thirty minutes, my life stops." — Julie</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="stats" class="section section-sage-soft">
+    <div class="container">
+      <p class="eyebrow centered">This isn't just three families</p>
+      <h2 class="centered">The scale of the work being absorbed at home</h2>
+
+      <div class="stats-grid">
+        <div class="stat">
+          <p class="stat-num">1 in 4</p>
+          <p class="stat-label">Singaporeans will be aged 65 or older by 2030 — one of the fastest-aging populations in the world.</p>
+          <p class="stat-source">Department of Statistics Singapore</p>
+        </div>
+        <div class="stat">
+          <p class="stat-num">~152,000</p>
+          <p class="stat-label">Singaporeans projected to live with dementia by 2030, nearly double today's number.</p>
+          <p class="stat-source">Alzheimer's Disease Association (Singapore)</p>
+        </div>
+        <div class="stat">
+          <p class="stat-num">~210,000</p>
+          <p class="stat-label">Informal family caregivers in Singapore today — most of them juggling caregiving alongside full-time work.</p>
+          <p class="stat-source">Lien Foundation / NTU studies</p>
+        </div>
+        <div class="stat">
+          <p class="stat-num">&gt;60%</p>
+          <p class="stat-label">of caregivers report regular stress, burnout, or anxiety from the demands of caregiving.</p>
+          <p class="stat-source">Various local caregiver surveys</p>
+        </div>
+      </div>
+
+      <p class="stats-note">Figures are illustrative and should be verified against the latest primary sources before final publication.</p>
+    </div>
+  </section>
+
+  <section id="considerations-callout" class="section">
+    <div class="container narrow">
+      <div class="callout">
+        <div class="callout-text">
+          <p class="eyebrow">Before we designed anything</p>
+          <h3>We considered other approaches first.</h3>
+          <p>Why not just add a feature to Grab? Why not a shared family calendar? Why not retrain drivers, or build a voice assistant, or stick with WhatsApp? We looked at each, found the gaps, and only then arrived at Carebear.</p>
+        </div>
+        <a href="considerations.html" class="btn btn-primary callout-btn">Read the thinking →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="carebear" class="section section-sage">
+    <div class="container">
+      <p class="eyebrow centered">The intervention</p>
+      <h2 class="centered">Meet Carebear</h2>
+      <p class="lede centered">
+        Carebear is a personal assistant for caregivers. It holds the schedule of care for everyone you look after, and quietly handles the logistics around it. The medical appointments, the daily transfers, the helpers, the rides — one place, one tap, one less thing to hold in your head.
+      </p>
+
+      <div class="how-grid">
+        <div class="how-item">
+          <div class="how-num">01</div>
+          <h3>Add an appointment</h3>
+          <p>"Dad — cardiologist, Thursday 3pm." Carebear asks the questions once: which clinic, return trip, prep needed, who's meeting him there. Saved forever.</p>
+        </div>
+        <div class="how-item">
+          <div class="how-num">02</div>
+          <h3>Carebear builds the timeline</h3>
+          <p>Reminders, helper pings, ride bookings, fasting alerts — all scheduled automatically from the appointment. You don't manage the timeline; the timeline manages itself.</p>
+        </div>
+        <div class="how-item">
+          <div class="how-num">03</div>
+          <h3>One tap to Grab</h3>
+          <p>When it's time to book, Carebear opens Grab with pickup, drop-off, and driver briefing already filled in. You confirm. Done.</p>
+        </div>
+        <div class="how-item">
+          <div class="how-num">04</div>
+          <h3>The right pings, only when they matter</h3>
+          <p>Pickup-helper gets notified to bring them down. Receiver gets notified at drop-off. You get notified only if something goes off-script.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="container">
+      <p class="eyebrow centered">How Carebear works</p>
+      <h2 class="centered">The pieces</h2>
+
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>Care Circle</h3>
+          <p>One caregiver, many people to look after. Profiles for each — conditions, languages, helpers, emergency contacts. Set up once.</p>
+        </div>
+        <div class="feature">
+          <h3>Smart Places</h3>
+          <p>"FIL's TCM in Hougang" is saved the first time, used forever. Aliases, accessibility notes, the doctor's name. Kills the Google-image-search loop.</p>
+        </div>
+        <div class="feature">
+          <h3>Events &amp; roles</h3>
+          <p>Medical appointments, recurring transfers, one-off outings — all the same shape. Each event knows who's the passenger, who hands off, who receives, who meets them there.</p>
+        </div>
+        <div class="feature">
+          <h3>Rendezvous sync</h3>
+          <p>When you're meeting them at the destination, Carebear sequences both rides so you arrive together. Two Grabs, one synced arrival.</p>
+        </div>
+        <div class="feature">
+          <h3>Auto driver briefing</h3>
+          <p>"Passenger has early-stage dementia, please confirm pickup with me at +65..." Pre-written, one-tap-sent. No retyping per trip.</p>
+        </div>
+        <div class="feature">
+          <h3>Exception-only alerts</h3>
+          <p>You get pinged when something deviates — delay, off-route, long stop. Otherwise Carebear just runs in the background. Your attention is precious.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="grab" class="section section-coral">
+    <div class="container">
+      <p class="eyebrow centered">For Grab</p>
+      <h2 class="centered">A funnel for recurring, high-value trips</h2>
+      <p class="lede centered">
+        Singapore is aging fast. Every caregiver Carebear supports generates predictable, repeatable ride demand — trips that today are either friction-laden bookings or leaking entirely to taxis and family driving.
+      </p>
+
+      <div class="biz-grid">
+        <div class="biz-card">
+          <h3>Volume</h3>
+          <p>A typical caregiver on Carebear generates between 2 and 20+ trips per week per care recipient — medical visits, daily transfers, return legs, and the caregiver's own rendezvous trips.</p>
+        </div>
+        <div class="biz-card">
+          <h3>Premium tier</h3>
+          <p>Carebear creates a natural home for <strong>Grab Care</strong> — opt-in drivers trained for elderly and special-needs passengers. New margin, new differentiation.</p>
+        </div>
+        <div class="biz-card">
+          <h3>Stickiness</h3>
+          <p>Once a caregiver has set up profiles, places, and recurring events in Carebear, switching ride apps means rebuilding everything. Highest-LTV users in the network.</p>
+        </div>
+      </div>
+
+      <div class="pitch-line">
+        <p>Carebear captures the schedule. Grab captures the trips it generates.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="prototype" class="section">
+    <div class="container narrow centered">
+      <p class="eyebrow">Try it</p>
+      <h2>Interactive prototype</h2>
+      <p class="lede">A clickable Figma prototype walking through HuiN's appointment day — from calendar to rendezvous — is coming next.</p>
+      <div class="proto-placeholder">
+        <span>Figma embed will live here</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="brand-foot">Carebear</p>
+      <p class="footer-meta">A student project in partnership with Grab. Built with care, for caregivers.</p>
+    </div>
+  </footer>
+</body>
+</html>

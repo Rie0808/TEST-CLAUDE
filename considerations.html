@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carebear — Considerations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Carebear</a>
+      <ul class="nav-links">
+        <li><a href="index.html#caregivers">Caregivers</a></li>
+        <li><a href="interviews.html">Interviews</a></li>
+        <li><a href="index.html#problem">The problem</a></li>
+        <li><a href="considerations.html" class="active">Considerations</a></li>
+        <li><a href="index.html#carebear">Carebear</a></li>
+        <li><a href="index.html#grab">For Grab</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container narrow">
+      <p class="eyebrow">Design considerations</p>
+      <h1 class="page-title">How we got to Carebear.</h1>
+      <p class="page-sub">After we mapped the pain Jocelyn, Julie, and HuiN were carrying, we didn't jump straight to building. We looked at the obvious answers first — and worked out why each fell short. This is that thinking.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container narrow">
+
+      <article class="consideration">
+        <p class="consideration-num">01</p>
+        <h2>Why not just add a feature inside Grab?</h2>
+        <p class="consideration-tag">The most direct fix — and the one we can't ship.</p>
+        <p>The cleanest version of this product lives natively inside Grab: a "Care mode" with saved care recipients, recurring trips, driver briefing cards, and multi-party tracking built in. But we don't work at Grab, and Grab won't let an external team ship into their app.</p>
+        <p><strong>Our move:</strong> build the caregiver-side experience standalone, prove that the demand and the design are real, and pitch the native integration to Grab as the obvious next step. The standalone is the wedge; the native version is the win.</p>
+      </article>
+
+      <article class="consideration">
+        <p class="consideration-num">02</p>
+        <h2>Why not a shared family calendar?</h2>
+        <p class="consideration-tag">Google Calendar / Apple Calendar / Cozi</p>
+        <p>A shared calendar handles the "when," but none of the "how." It doesn't know that this Thursday appointment needs a Grab booked at 2:30pm, that the driver needs a dementia briefing, that the part-time helper needs to be downstairs by 2:45, that HuiN needs to leave at 2:20 to make the rendezvous.</p>
+        <p><strong>The gap:</strong> calendars are passive. Caregivers don't need a reminder — they need an assistant that takes action when the reminder fires.</p>
+      </article>
+
+      <article class="consideration">
+        <p class="consideration-num">03</p>
+        <h2>Why not retrain Grab drivers?</h2>
+        <p class="consideration-tag">A driver-side fix</p>
+        <p>Training drivers to handle elderly or dementia passengers would help — and we think Grab should do it (see <a href="index.html#grab">For Grab</a>). But driver training only kicks in once the passenger is already in the car. It doesn't fix the destination ambiguity, the scheduling burden, the multi-party coordination, or the fact that the caregiver is the one absorbing all of it before the ride even begins.</p>
+        <p><strong>The gap:</strong> the pain is upstream of the ride. Better drivers don't reduce the dispatcher work; they just make the ride itself smoother.</p>
+      </article>
+
+      <article class="consideration">
+        <p class="consideration-num">04</p>
+        <h2>Why not a voice assistant?</h2>
+        <p class="consideration-tag">"Hey Siri, book a Grab for Mum"</p>
+        <p>Voice is great for fast individual actions — booking one ride, setting one reminder. It's terrible at the thing that actually breaks caregivers: orchestrating multiple parties across a thirty-minute window, monitoring exceptions, sequencing two arrivals at a clinic. That kind of work needs state, a UI, and an ambient eye on what's happening — none of which voice does well.</p>
+        <p><strong>The gap:</strong> voice is a fast input. The caregiver problem is a slow choreography.</p>
+      </article>
+
+      <article class="consideration">
+        <p class="consideration-num">05</p>
+        <h2>Why not just WhatsApp?</h2>
+        <p class="consideration-tag">The status quo</p>
+        <p>Right now caregivers <em>are</em> the WhatsApp. They're the message bus between part-time helper, Grab driver, family member, receiving helper. They re-type the same dementia briefing each trip. They paste addresses they had to find themselves. They monitor the route and then forward the ETA manually.</p>
+        <p><strong>The gap:</strong> WhatsApp is the problem in its purest form. The whole point of Carebear is to take the caregiver out of the message-bus role.</p>
+      </article>
+
+      <article class="consideration">
+        <p class="consideration-num">06</p>
+        <h2>Trade-offs we're accepting</h2>
+        <p class="consideration-tag">What we're knowingly leaving on the table — for now</p>
+        <p>Because Carebear lives outside Grab, the driver briefing has to be sent via Grab's in-app chat instead of appearing as a native briefing card in the driver's app. Live monitoring relies on Grab's shareable trip link rather than a real-time data feed. Booking takes one extra confirmation tap inside Grab.</p>
+        <p>These are all bridgeable the day Grab partners with us. We've designed Carebear so the upgrade path is "flip a switch," not "rebuild the product."</p>
+      </article>
+
+      <div class="back-link-wrap">
+        <a href="index.html" class="btn btn-ghost">← Back to the main story</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="brand-foot">Carebear</p>
+      <p class="footer-meta">A student project in partnership with Grab. Built with care, for caregivers.</p>
+    </div>
+  </footer>
+</body>
+</html>
